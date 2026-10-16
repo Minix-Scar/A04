@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cnb22 | Website Development</title>
+<style>
+  :root {
+    --bg: #f2f5f9;
+    --ink: #14213d;
+    --muted: #55627a;
+    --accent: #1d4ed8;
+    --line: #cfd8e6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f172a;
+      --ink: #e8eefc;
+      --muted: #9aa8c4;
+      --accent: #7aa2ff;
+      --line: #2a3756;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+  }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 40rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+  h1 {
+    font-size: clamp(3rem, 12vw, 5.5rem);
+    line-height: 1;
+    margin: 0 0 2rem;
+    letter-spacing: -0.02em;
+    color: var(--accent);
+  }
+  dl { margin: 0; border-top: 2px solid var(--ink); }
+  .row {
+    display: grid;
+    grid-template-columns: 11rem 1fr;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  dt { color: var(--muted); font-style: italic; }
+  dd { margin: 0; font-size: 1.15rem; }
+  footer {
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+  @media (max-width: 30rem) {
+    .row { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>cnb22</h1>
+    <dl>
+      <div class="row"><dt>Username</dt><dd>cnb22</dd></div>
+      <div class="row"><dt>Course name</dt><dd>Website Development</dd></div>
+      <div class="row"><dt>Course number and section</dt><dd>IS117003</dd></div>
+    </dl>
+  </main>
+  <footer>
+    &copy; cnb22 &ndash; Due October 6
+  </footer>
+</body>
+</html>
